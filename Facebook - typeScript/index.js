@@ -1,4 +1,3 @@
-/* =========================== */
 //class definition for Facebook Class
 var Facebook = /** @class */ (function () {
     function Facebook(_name, _birthday, _gender, _interestedIn, _languages, _relegiousViews, _relationship, _quote, _address, _contact, _facebookId) {

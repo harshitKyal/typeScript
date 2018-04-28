@@ -1,36 +1,39 @@
 
-/* =========================== */
 
 //class definition for Facebook Class
 
 class Facebook{
     
-    educations!: object[];
-    works!: object[];
+    //method to suggest friends which takes facebook Id as input and suggest friends accordingly
+    friendSuggestion : (facebookId:string) => object;
+    //methods to display adds
+    displayAdds : (facebookId:string) => object;
+
+    private educations!: object[];
+    private works!: object[];
         
     //Basic Info
-    name : string
-    birthday : string
-    gender : string
-    interestedIn : string
-    languages!: string[];
-    relegiousViews :string
-    relationship :string
-    quote : string
-    address : string
-    contact : number
-    facebookId : string
-    families!: object[];
+    private name : string
+    private birthday : string
+    private gender : string
+    private interestedIn : string
+    private languages!: string[];
+    private relegiousViews :string
+    private relationship :string
+    private quote : string
+    private address : string
+    private contact : number
+    private facebookId : string
+    private families!: object[];
 
-    //OtherInfo
-    places!: string[];
-    friends!: string[];
-    checkIns!: object[];
-    music!: object[];
-    movies!: object[];
-    tvSeries!: object[];
-    books!: object[];
-    likes!: string[];
+    private places!: string[];
+    private friends!: string[];
+    private checkIns!: object[];
+    private music!: object[];
+    private movies!: object[];
+    private tvSeries!: object[];
+    private books!: object[];
+    private likes!: string[];
 
 
     constructor(_name : string,_birthday : string,_gender : string,_interestedIn : string,_languages : string [],
@@ -52,67 +55,67 @@ class Facebook{
     }
 
     //getter methods
-    getFamiliy = () =>{
+    getFamiliy = ():object[] =>{
         return this.families;
     }
-    getName = () =>{
+    getName = ():string =>{
         return this.name;
     }
-    getBirthdate = () => {
+    getBirthdate = ():string => {
         return this.birthday;
     }
-    getGender = () =>{
+    getGender = ():string =>{
         return this.gender;
     }
-    getInterestedIn = () =>{
+    getInterestedIn = ():string =>{
         return this.interestedIn;
     }
-    getRelegiousView = () =>{
+    getRelegiousView = ():string =>{
         return this.relegiousViews;
     }
-    getQuote = () => {
+    getQuote = ():string => {
         return this.quote;
     }
-    getLanguages = () =>{
+    getLanguages = ():string[] =>{
         return this.languages;
     }
-    getRelationShipStatus = () =>{
+    getRelationShipStatus = ():string =>{
         return this.relationship;
     }
-    getContact = () => {
+    getContact = ():number => {
         return this.contact;
     }
-    getAddress = () => {
+    getAddress = ():string => {
         return this.address;
     }
-    getFacebookId = () => {
+    getFacebookId = ():string => {
         return this.facebookId;
     }
-    getEducations = () =>{
+    getEducations = ():object[] =>{
         return this.educations
     }
-    getWorks = () =>{
+    getWorks = ():object[] =>{
         return this.works
     }
-    getMovies = () => {
+    getMovies = ():object[] => {
         return this.movies;
     }
-    getPlaces = () => {
+    getPlaces = ():string[] => {
         return this.places;
     }
-    getFamilies = () =>{
+    getFamilies = ():object[] =>{
         return this.families;
     }
-    getLikes =() =>{
+    getLikes =():string[] =>{
         return this.likes;
     }
-    getMusic = () => {
+    getMusic = ():object[] => {
         return this.music;
     }
-    getTvSeries = () => {
+    getTvSeries = ():object[] => {
         return this.tvSeries;
     }
-    getFriends = () => {
+    getFriends = ():string[] => {
         return this.friends;
     }
     
@@ -159,7 +162,7 @@ class Facebook{
         this.checkIns = _checkIns
     }
     //to calculate age
-    getAge = (dateString:string) => {
+    getAge = (dateString:string):number => {
         let today = new Date();
         let birthDate = new Date(dateString);
         let age = today.getFullYear() - birthDate.getFullYear();
@@ -195,7 +198,7 @@ console.log(`Facebook Id : ${user1.getFacebookId()}`)
 let edu1 = {
     instituteName : "SCET",
     degree : "B.Tech",
-    yearOfPassing:"2016-2013",
+    yearOfPassing:"2017",
     place:"Surat",
     University:"GTU"
 }
@@ -204,7 +207,7 @@ let edu1 = {
 let edu2 = {
     instituteName : "1SCET",
     degree : "B.Tech",
-    yearOfPassing:"2016-2013",
+    yearOfPassing:"2017",
     place:"Surat",
     University:"GTU"
 }
@@ -272,4 +275,5 @@ console.log(`Movies : `)
 console.log(user1.getMovies())
 console.log(`Tv Series :`)
 console.log(user1.getTvSeries())
+    
 console.log("--------------------------------")
